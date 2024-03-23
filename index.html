@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        #container{
+            width:100vw;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        #calculetor{
+          padding:2px;
+            background-color:black;
+            color:white;
+            border-radius:10px;
+            justify-content:center;
+            align-items:center;
+           width:300px;
+           height:440px;
+        }
+        #ac{
+            background-color:red;
+            color:white;
+        }
+        #disdiv{
+            width:100%;
+            
+        }
+       #display input{
+         
+            width:100%;
+           
+       
+        }
+      
+       .display input{
+            width:63px;
+            height:60px;
+            text-align:right;
+            border-radius:16px;
+            
+        }
+        input{
+            width:71px;
+            height:65px;
+            border-radius:7px;
+            cursor:pointer;
+            border:none;
+            outline:none;
+           font-size:30px;    
+        }
+        div{
+            margin-top:4px;
+           
+        }
+        #equal{
+            width:145px;
+            background-color:green;
+            color:white;
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="calculetor">
+            <div id="display">
+                <input type="text" name="display" id="displayy">
+            </div>
+            
+            <div id="disdiv">
+               <input id="ac" type="button" value="AC" onclick="displayy.value=''" >
+       <input type="button" value="De" onclick="displayy.value=displayy.value.toString().slice(0,-1)">
+            <input type="button" value="." onclick="displayy.value+='.'">
+                  <input type="button" value="/" onclick="displayy.value+='/'">                
+            </div>
+            <div>
+                            <input type="button" value="7" onclick="document.getElementById('displayy').value+='7'">
+       <input type="button" value="8"
+ onclick="displayy.value+='8'">
+            <input type="button" value="9" onclick="displayy.value+='9'">
+                  <input type="button" value="*"
+                  onclick="displayy.value+='*'"> 
+            </div>
+            <div>
+                            <input type="button" value="4"
+                            onclick="displayy.value+='4'">
+       <input type="button" value="5" onclick="displayy.value+='5'">
+            <input type="button" value="6" onclick="displayy.value+='6'">
+                  <input type="button" value="-"
+                  onclick="displayy.value+='-'"> 
+            </div>
+            <div>
+                            <input type="button" value="1"
+                            onclick="displayy.value+='1'">
+       <input type="button" value="2"
+       onclick="displayy.value+='2'">
+            <input type="button" value="3"
+            onclick="displayy.value+='3'">
+                  <input type="button" value="+"
+                  onclick="displayy.value+='+'"> 
+            </div>
+                        <div>
+                           
+                      
+       <input type="button" value="0"
+       onclick="displayy.value+='0'">
+       
+            <input type="button" value="00"
+            onclick="displayy.value+='00'">
+                 
+                  <input type="button" value="=" id="equal"
+                  onclick="displayy.value=eval(displayy.value)"> 
+            </div>
+        </div>
+    </div>
+    <script></script>
+</body>
+</html>
